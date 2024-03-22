@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
-import { selectContactsItems } from '../../redux/contactsSlice';
+import { selectFilteredContacts } from '../../redux/contactsSlice';
 
 export default function ContactCount() {
-  const contactCount = useSelector(selectContactsItems).length;
+  const contactCount = useSelector(selectFilteredContacts).length;
 
   return <p>Contacts: ({contactCount})</p>;
 }
